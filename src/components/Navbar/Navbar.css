@@ -1,0 +1,127 @@
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  z-index: 1;
+  font-size: 1.36rem;
+  color: white;
+
+  border: none;
+  margin-top: 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+
+}
+
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  padding: 0 1.8rem;
+}
+.nav-menu li:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+letter-spacing: 2px;
+}
+
+.hamburger {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+.home-icon {
+  color: aliceblue !important;
+}
+.nav-icons {
+  margin-top: 1rem;
+
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+
+  
+}
+.icon{
+  margin-left: 1rem;
+}
+
+.logo:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+
+}
+@media screen and (max-width: 940px) {
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: -100vh;
+    left: 0;
+    position: absolute;
+    justify-content: space-between;
+
+    background-color:rgba(0, 0, 0, 0.7);
+    transition: 0.3s;
+  }
+
+  .active {
+    top: 80px;
+  }
+  .mobile-menu li {
+    padding: 1.2rem 1rem;
+    margin: 0 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+ 
+
+  .mobile-nav {
+    margin: 1rem 0;
+  }
+  .mobile-menu-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+  .social-icons .icon:hover {
+   cursor: pointer;
+   color: #222;
+  }
+  .mobile-menu button {
+    margin: 1rem;
+    width: 50%;
+  }
+  .hamburger {
+    display: block;
+
+
+  }
+
+  .hamburger:hover {
+    cursor: pointer;
+    transform: scale(0.8);
+    transition: 0.5s;
+
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-menu li:hover{
+    cursor: pointer;
+    color: #222;
+  }
+  .nav-icons {
+    display: none;
+  }
+}

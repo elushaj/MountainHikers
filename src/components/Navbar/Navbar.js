@@ -1,12 +1,12 @@
 import "./Navbar.css";
 import React, { useState } from "react";
-import Button from "./Button";
-import { GrHomeRounded } from "react-icons/gr";
+import Button from "../Button";
+import { AiOutlineMenu } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";
-import logo from "../assets/output-onlinepngtools.png";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import logo from "../../assets/output-onlinepngtools.png";
 import {AiOutlineClose} from 'react-icons/ai'
+import {MdHomeFilled} from 'react-icons/md'
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 function Navbar() {
 
@@ -14,32 +14,32 @@ const [nav,setNav]=useState(false)
 const handleNav=()=>setNav(!nav)
 
   return (
-    <div className='navbar'>
+    <div className="navbar">
       <div className='logo'>
-        <img style={{ height: 66, width: 83 }} alt="logo" src={logo} />
+        <img style={{ height: 76, width: 93 }} alt="logo" src={logo} />
       </div>
       <ul className="nav-menu">
         <li>
-          <GrHomeRounded/>
+          <MdHomeFilled color="white" size={32}/>
         </li>
         <li>Galeria</li>
         <li>Për ne</li>
         <li>FAQ</li>
         <li>Kontakt</li>
       </ul>
-      <div className="nav-icons">
-        <IoIosNotificationsOutline className='icon'  />
-        <BsPerson className='icon'  />
+      <div className="nav-icons" style={{marginRight:'1rem'}}>
+        <IoIosNotificationsOutline size={32}className='icon'  />
+        <BsPerson size={32}  className='icon'  />
       </div>
       <div onClick={handleNav} className="hamburger">
-      {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
+ {!nav ?(<AiOutlineMenu className='icon'style={{ height: 36, width: 53 }} />) : (<AiOutlineClose className="icon"/>)} 
       </div>
 
 
       <div className={nav ?'mobile-menu active':'mobile-menu'}>
         <ul className='mobile-nav'>
           <li>
-            <GrHomeRounded />
+            <MdHomeFilled />
           </li>
           <li>Galeria</li>
           <li>Për ne</li>
