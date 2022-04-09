@@ -105,7 +105,9 @@ margin: 0 auto;
     .gallery{
         column-count: 2;
         column-width: 100% ;
+
     }
+    .gallery-container{overflow: hidden;}
 }
 h1{
     text-align: center;

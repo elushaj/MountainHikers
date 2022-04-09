@@ -36,4 +36,11 @@ height: 50px;
     .services label{
         display: none;
     }
+    .services{overflow: hidden;}
+}
+
+@media (max-width:414px) {
+    .services li{
+   padding:0 1rem 0.2rem !important
+    }
 }

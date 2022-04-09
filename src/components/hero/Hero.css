@@ -148,4 +148,15 @@
     
 
 }
+@media screen and (max-width: 407px) {
+    .form input[type=text] {
+        max-width: 220px;
+    }
+    .form{
+        max-width: 350px;
+    }
+
+    
+
+}
 
