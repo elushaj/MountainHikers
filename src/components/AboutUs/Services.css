@@ -1,0 +1,39 @@
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: row;
+    color: white;
+    width: 100%;
+    min-width: 100%;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.services ul{
+    display: flex;
+   
+
+
+
+}
+.services li{
+    display: flex;
+    align-items: center;
+    padding: 0 3rem  0.2rem;
+}
+.services .icon{
+width: 100px;
+height: 50px;
+}
+.services label{
+    font-size: 1.57rem;
+    padding-top: 1rem;
+    
+}
+
+@media (max-width:50rem) {
+    .services label{
+        display: none;
+    }
+}

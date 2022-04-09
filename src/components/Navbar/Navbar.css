@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 .navbar {
   position: relative;
   display: flex;
@@ -125,3 +126,29 @@ letter-spacing: 2px;
     display: none;
   }
 }
+
+.navbar h4{
+
+  font-family: 'Grape Nuts', cursive;
+  font-size: 1.8rem;
+  
+
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  margin-left: 1.2rem;
+ 
+     
+}
+
+
+.navbar h4:hover{
+  cursor: pointer;
+
+  transform: scale(1.2);
+  letter-spacing: 2px;
+}
+
+

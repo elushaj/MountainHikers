@@ -37,6 +37,7 @@
 .gallery .pics:hover{
 filter: grayscale(1);
 transform: scale(1.1);
+cursor: pointer;
 }
 
 .gallery .pics:hover h3{

@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import React, { useState } from "react";
-import Button from "../Button";
+import Button from "../button/Button";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { IoIosNotificationsOutline } from "react-icons/io";
@@ -25,11 +25,10 @@ const handleNav=()=>setNav(!nav)
         <li>Galeria</li>
         <li>Për ne</li>
         <li>FAQ</li>
-        <li>Kontakt</li>
+        <li>Kontakt</li><h4>Aventura e radhës</h4>
       </ul>
       <div className="nav-icons" style={{marginRight:'1rem'}}>
-        <IoIosNotificationsOutline size={32}className='icon'  />
-        <BsPerson size={32}  className='icon'  />
+      
       </div>
       <div onClick={handleNav} className="hamburger">
  {!nav ?(<AiOutlineMenu className='icon'style={{ height: 36, width: 53 }} />) : (<AiOutlineClose className="icon"/>)} 
@@ -48,8 +47,8 @@ const handleNav=()=>setNav(!nav)
         </ul>
         <div className="mobile-menu-bottom">
           <div className="menu-icons">
-            <Button>Njoftimet</Button>
-            <Button>Llogaria</Button>
+            <Button>Aventura e radhës</Button>
+            
           </div>
           <div className="social-icons">
             <FaFacebook className='icon' />
