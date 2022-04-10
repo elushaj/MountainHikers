@@ -4,7 +4,7 @@ import './AboutUs.css'
 
 function AboutUs() {
   return (
-      <div className='aboutus'>
+      <div name='perne' className='aboutus'>
     <div className='about'><img
     className="about-img"
     src={Img3}

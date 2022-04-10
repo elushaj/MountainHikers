@@ -4,9 +4,9 @@ import Hero from './components/hero/Hero';
 import Gallery from './components/Gallery/Gallery';
 import AboutUs from './components/AboutUs/AboutUs';
 import Services from './components/AboutUs/Services';
-import Slider from './components/carousel/Slider';
 import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
+import Event from './components/Events/Event';
 function App() {
   return (
    <div>
@@ -17,8 +17,9 @@ function App() {
   <Services/>
 
   <FAQ/>
+  <Event/>
   <Contact/>
-  <Slider/>
+ 
  
    </div>
   );

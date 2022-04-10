@@ -14,7 +14,7 @@ const cancelSearch=(event)=>{setSearch(search)
 }
 
   return (
-    <div className='hero'>
+    <div name='home' className='hero'>
         <video autoPlay loop muted id='video'>
 <source src={Video} type='video/mp4'/>
         </video>

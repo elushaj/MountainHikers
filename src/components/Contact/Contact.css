@@ -150,3 +150,14 @@ margin-top: 5rem;
        
     }
 }
+
+.alertbox{
+    width: auto;
+    height: 60px;
+    background-color: rgba(76, 76, 222, 0.625);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+  
+}

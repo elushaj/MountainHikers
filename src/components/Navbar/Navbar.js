@@ -1,11 +1,9 @@
 import "./Navbar.css";
 import React, { useState } from "react";
 import Button from "../button/Button";
-import { AiOutlineMenu } from "react-icons/ai";
-import { BsPerson } from "react-icons/bs";
-import { IoIosNotificationsOutline } from "react-icons/io";
+import { AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import logo from "../../assets/output-onlinepngtools.png";
-import {AiOutlineClose} from 'react-icons/ai'
+import {Link} from 'react-scroll'
 import {MdHomeFilled} from 'react-icons/md'
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 function Navbar() {
@@ -14,18 +12,19 @@ const [nav,setNav]=useState(false)
 const handleNav=()=>setNav(!nav)
 
   return (
+  
     <div className="navbar">
       <div className='logo'>
         <img style={{ height: 76, width: 93 }} alt="logo" src={logo} />
       </div>
       <ul className="nav-menu">
         <li>
-          <MdHomeFilled color="white" size={32}/>
+         <Link to="home"> <MdHomeFilled color="white" size={32}/></Link>
         </li>
-        <li>Galeria</li>
-        <li>Për ne</li>
-        <li>FAQ</li>
-        <li>Kontakt</li><h4>Aventura e radhës</h4>
+        <Link to='galeria'><li>Galeria</li></Link>
+        <Link to='perne'> <li>Për ne</li></Link>
+        <Link to='FAQ'> <li>FAQ</li></Link>
+        <Link to='kontakt'><li>Kontakt</li> </Link>  <Link to='event'><h4>Aventura e radhës</h4></Link>
       </ul>
       <div className="nav-icons" style={{marginRight:'1rem'}}>
       
@@ -38,22 +37,22 @@ const handleNav=()=>setNav(!nav)
       <div className={nav ?'mobile-menu active':'mobile-menu'}>
         <ul className='mobile-nav'>
           <li>
-            <MdHomeFilled />
-          </li>
-          <li>Galeria</li>
-          <li>Për ne</li>
-          <li>FAQ</li>
-          <li>Kontakt</li>
+          <Link to="home"> <MdHomeFilled /></Link>
+        </li>
+          <Link to='galeria'><li>Galeria</li></Link>
+        <Link to='perne'> <li>Për ne</li></Link>
+        <Link to='FAQ'> <li>FAQ</li></Link>
+        <Link to='kontakt'><li>Kontakt</li> </Link> 
         </ul>
         <div className="mobile-menu-bottom">
           <div className="menu-icons">
-            <Button>Aventura e radhës</Button>
-            
+           <Link to='event'> <Button>Aventura e radhës</Button>
+            </Link>
           </div>
           <div className="social-icons">
-            <FaFacebook className='icon' />
-            <FaInstagram className='icon' />
-            <FaYoutube className='icon' />
+          <a href="https://www.facebook.com/mountainhikersclub"  > <FaFacebook className='icon' style={{color:'white'}} /></a>
+           <a href="https://www.instagram.com/mountainhikersclub/" ><FaInstagram className='icon'  style={{color:'white'}} /></a>
+           
           </div>
         </div>
       </div>

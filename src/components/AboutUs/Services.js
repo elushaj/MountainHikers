@@ -5,7 +5,7 @@ import {GiCampingTent} from 'react-icons/gi'
 import './Services.css'
 function Services() {
   return (
-    <div className='services'>
+    <div  className='services'>
     <ul>
         <li><FaHiking className='icon'/> <label>HIKING</label></li>
         <li><GiCampingTent className='icon'/><label>KAMPING</label></li>

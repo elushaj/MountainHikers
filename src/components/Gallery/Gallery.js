@@ -3,7 +3,6 @@ import './Gallery.css'
 import {AiOutlineArrowRight,AiOutlineClose} from 'react-icons/ai'
 
 
-import Slider from '../carousel/Slider'
 import data from './dataAlbum'
 
 const  Gallery=()=> {
@@ -24,7 +23,7 @@ setModel(true)
   return (
 
 
-    <div className='gallery-container'>
+    <div name='galeria' className='gallery-container'>
      
 <h1>Galeria</h1> 
 <div className={model ? 'model open':'model'}>

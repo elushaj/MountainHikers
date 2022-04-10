@@ -1,14 +1,32 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { AiOutlineInstagram, AiFillYoutube } from "react-icons/ai";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { RiFacebookCircleLine } from "react-icons/ri";
+import AlertBox from "./AlertBox";
 import "./Contact.css";
 function Contact() {
   const form = useRef();
+  const isEmpty = (value) => value.trim() === '';
+  const [values, setValues] = useState({
+    name: "",
+    message: "",
+  });
 
-  const sendEmail = (e) => {
+  
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value,
+    });
+  };
+  
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    
 
     emailjs
       .sendForm(
@@ -21,6 +39,7 @@ function Contact() {
         (result) => {
           console.log(result.text);
         },
+        setStatus("SUCCESS"),
         (error) => {
           console.log(error.text);
         }
@@ -28,29 +47,43 @@ function Contact() {
     e.target.reset();
   };
 
+  useEffect(() => {
+    if (status === "SUCCESS") {
+      setTimeout(() => {
+        setStatus("");
+      }, 3000);
+    }
+  });
+
   return (
-    <div className="contact-container">
+    <div name='contact'className="contact-container">
       <div className="contact-content">
-      
-          <h2>Na Kontaktoni</h2>{" "}
-          <div className="box">
-              <div className="contact-form">
-          <form ref={form} onSubmit={sendEmail}>
-            <input
-              className="input"
-              placeholder="Emri"
-              type="text"
-              name="name"
-            />
+        {status && <AlertBox className="alertbox" />}
+        <h2>Na Kontaktoni</h2>
 
-         
+        <div className="box">
+          <div className="contact-form">
+            <form ref={form} onSubmit={handleSubmit}>
+              <input
+                className="input"
+                placeholder="Emri"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={values.name}
+              />
 
-            <textarea placeholder="Mesazhi . . ." name="message" />
-            <input className="send-btn" type="submit" value="Dërgo" />
-          </form></div>
+              <textarea
+                placeholder="Mesazhi . . ."
+                name="message"
+                onChange={handleChange}
+                value={values.name}
+              />
+              <input className="send-btn" type="submit" value="Dërgo" />
+            </form>
+          </div>
           <div className="contact-info">
             <div className="contact-box">
-
               <FiPhoneCall className="white-icon" />{" "}
               <label> +383 49 897889</label>
             </div>
@@ -68,10 +101,8 @@ function Contact() {
               <AiOutlineInstagram className="white-icon" />{" "}
               <label>@mountainhikersclub </label>
             </div>
-           
           </div>
-          
-       </div>
+        </div>
       </div>
     </div>
   );
